@@ -1,6 +1,6 @@
 # Setup
 - installed Raspberry Pi OS using Raspberry Pi Imager
-  from - https://www.raspberrypi.com/software/?utm_source=chatgpt.com
+from - https://www.raspberrypi.com/software/?utm_source=chatgpt.com
 - connected to Pi via SSH
 - fixed locale issue (en_GB.UTF-8)
 
@@ -13,14 +13,14 @@ The unknown environment variables are:
 
 ### Solution
 1. Install the locales by running:
-   sudo dpkg-reconfigure locales
-   selected: en_GB.UTF-8
+sudo dpkg-reconfigure locales
+selected: en_GB.UTF-8
 
 2. Set default locale:
-   sudo update-locale LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8
+sudo update-locale LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8
 
 3. Fixed LC_CTYPE:
-   sudo update-locale LC_CTYPE=en_GB.UTF-8
+sudo update-locale LC_CTYPE=en_GB.UTF-8
 
 4. Reconnected via SHH
-   No more warnings after login. Locale must be both generated and set as default
+No more warnings after login. Locale must be both generated and set as default
