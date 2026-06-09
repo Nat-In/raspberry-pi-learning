@@ -47,13 +47,13 @@ The project currently contains a single service:
 services:
   pihole:
 ```
-The container name ```phole``` is set so that Docker doesn't generate a random name. The service uses the lastes Pi-hole image.
+The container name ```pihole``` is set so that Docker doesn't generate a random name. The service uses the lastes Pi-hole image.
 
 ### Network
 The container is connected to a custom Docker bridge network. 
 I chose the bridge driver because I'm currently using Pi-hole only as a DNS server. A bridge network provides network isolation while still allowing access through published ports.
 
-In the future, if Pi-hope is also configured as a DHCP server, using host networking may be more appropriate because DHCP relies on broadcast traffic within the local network.
+In the future, if Pi-hole is also configured as a DHCP server, using host networking may be more appropriate because DHCP relies on broadcast traffic within the local network.
 
 ### Ports
 Ports are published to make services inside the container accessible from the host system.
